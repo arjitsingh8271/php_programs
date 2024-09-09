@@ -1,0 +1,31 @@
+To run PHP programs:
+--------------------
+XAMPP:-
+-----
+	For Linux
+	---------
+	1. Start xampp server:
+		$ sudo /opt/lampp/lampp start
+	2. In Browser type:
+		localhost/folder_name
+			It will so all programs, hit enter to run
+
+			Afert edit program Refresh the Tab
+
+	3. Stop xamp server:
+		$ sudo /opt/lampp/lampp stop
+
+	For Windows
+	-----------
+	1. Start xampp server:
+		Search xampp
+			click start-> mysql, php
+	2. In Browser type:
+		localhost/folder_name
+			It will so all programs, hit enter to run
+
+			Afert edit program Refresh the Tab
+
+	3. Stop xamp server:
+		Search xampp
+			click stop-> mysql, php
