@@ -47,7 +47,7 @@
 	<?php
 	// if(isset($_REQUEST['sub']) && $_REQUEST['sub'] != "") {
 		echo "<pre>";
-		print_r ($_REQUEST);
+		print_r($_REQUEST);
 		echo "</pre>";
 	//}
 
