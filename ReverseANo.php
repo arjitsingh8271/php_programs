@@ -29,7 +29,7 @@
 		while($num > 0) {
 			$digit = $num % 10;
 			$rev = ($rev * 10) + $digit;
-			$num = (int)($num / 10);
+			$num = ($num / 10);
 		}
 
 		echo "<p>Reverse of <b>$temp</b> is <b>$rev</b></p>";

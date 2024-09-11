@@ -29,7 +29,7 @@
 		while($temp > 0) {
 			$digit = $temp % 10;
 			$rev = ($rev * 10) + $digit;
-			$temp = (int)($temp / 10);
+			$temp = ($temp / 10);
 		}
 
 		if($num == $rev) {

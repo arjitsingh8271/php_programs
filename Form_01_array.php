@@ -11,32 +11,32 @@
 			<tr>
 				<td>Name</td>
 				<td>:</td>
-				<td><input type="text"></td>
+				<td><input type="text" name="Name"></td>
 			</tr>
 			<tr>
 				<td>Roll</td>
 				<td>:</td>
-				<td><input type="number"></td>
+				<td><input type="number" name="RollNo"></td>
 			</tr>
 			<tr>
 				<td>Dept</td>
 				<td>:</td>
-				<td><input type="text"></td>
+				<td><input type="text" name="Dept"></td>
 			</tr>
 			<tr>
 				<td>Mobile No.</td>
 				<td>:</td>
-				<td><input type="number"></td>
+				<td><input type="number" name="MobNo"></td>
 			</tr>
 			<tr>
 				<td>City</td>
 				<td>:</td>
-				<td><input type="text"></td>
+				<td><input type="text" name="City"></td>
 			</tr>
 			<tr>
 				<td>State</td>
 				<td>:</td>
-				<td><input type="text"></td>
+				<td><input type="text" name="State"></td>
 			</tr>
 			<tr>
 				<td><button type="submit" name="sub">Submit</td>
