@@ -20,33 +20,43 @@
 	</form>
 	
 	<?php
-	if(isset($_REQUEST["sub"]) && $_REQUEST["sub"] != "") {
-		$num = $_REQUEST["number"];
-		$temp = $num;
-		$sum = 0;
-		$digit = 0;
-		
-		while($num != 0) {
-			$num = ($num / 10);
-			$digit++;
-		}
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $number = $_POST['number'];
+        $originalNumber = $number;
+        $sum = 0;
+        $numDigits = 0;
 
-		// while($num != 0) {
-		// 	$digit = $num % 10;
-		// 	$sum += $digit * $digit * $digit;
-		// 	$num = ($num / 10);
-		// }
+        // Manually find the number of digits
+        $temp = $number;
+        while ($temp != 0) {
+            $temp = floor($temp / 10);
+            $numDigits++;
+        }
 
-		for ($i=0; $i<$digit ; $i++) { 
-			$sum *= $digit;
-		}
-		
-		if($temp == $sum)
-			echo "<b>$temp</b> is a Armstrong number.";
-		else
-			echo "<b>$temp</b> is not a Armstrong number.";
-		
-	}
-	?>
+        // Function to calculate power manually
+        function power($base, $exp) {
+            $result = 1;
+            for ($i = 0; $i < $exp; $i++) {
+                $result *= $base;
+            }
+            return $result;
+        }
+
+        // Calculate the sum of digits raised to the power of number of digits
+        $temp = $number;
+        while ($temp != 0) {
+            $digit = $temp % 10;  // Extract last digit
+            $sum += power($digit, $numDigits);  // Add digit^numDigits to sum
+            $temp = floor($temp / 10);  // Remove the last digit
+        }
+
+        // Check if the sum equals the original number
+        if ($sum == $originalNumber) {
+            echo "<h3>$originalNumber is an Armstrong number.</h3>";
+        } else {
+            echo "<b>$originalNumber</b> is not an Armstrong number.";
+        }
+    }
+    ?>
 </body>
 </html>
